@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buna Cards - Digital Profile</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f2f6fb; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+    .card { background: #ffffff; width: 90%; max-width: 350px; border-radius: 16px; padding: 25px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+    .profile-icon { width: 80px; height: 80px; background: #4a6cf7; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 32px; font-weight: bold; }
+    h1 { font-size: 22px; margin: 8px 0; color: #333; }
+    h2 { font-size: 14px; color: #4a6cf7; margin-bottom: 15px; font-weight: normal; }
+    .bio { font-size: 14px; color: #555; margin-bottom: 20px; line-height: 1.5; }
+    .btn { display: block; text-decoration: none; color: #fff; padding: 12px; border-radius: 8px; margin-bottom: 10px; font-size: 14px; transition: 0.3s; font-weight: bold; }
+    .whatsapp { background: #25D366; }
+    .email { background: #333; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="profile-icon">B</div>
+    <h1>የአንተ ስም</h1>
+    <h2>Graphics Designer & Video Editor</h2>
+    <p class="bio">Creative designer focused on clean visuals and cinematic storytelling in Jimma.</p>
+    <div class="buttons">
+      <a href="https://wa.me/251900000000" class="btn whatsapp">WhatsApp አግኙኝ</a>
+      <a href="mailto:test@example.com" class="btn email">Email ላኩልኝ</a>
+    </div>
+  </div>
+</body>
+</html>
