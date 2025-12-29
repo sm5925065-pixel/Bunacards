@@ -1,31 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Buna Cards - Digital Profile</title>
-  <style>
-    body { font-family: Arial, sans-serif; background: #f2f6fb; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
-    .card { background: #ffffff; width: 90%; max-width: 350px; border-radius: 16px; padding: 25px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-    .profile-icon { width: 80px; height: 80px; background: #4a6cf7; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 32px; font-weight: bold; }
-    h1 { font-size: 22px; margin: 8px 0; color: #333; }
-    h2 { font-size: 14px; color: #4a6cf7; margin-bottom: 15px; font-weight: normal; }
-    .bio { font-size: 14px; color: #555; margin-bottom: 20px; line-height: 1.5; }
-    .btn { display: block; text-decoration: none; color: #fff; padding: 12px; border-radius: 8px; margin-bottom: 10px; font-size: 14px; transition: 0.3s; font-weight: bold; }
-    .whatsapp { background: #25D366; }
-    .email { background: #333; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buna Cards | Digital Profile</title>
+    <style>
+        /* 1. አኒሜሽኖች (Animations) */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(74, 108, 247, 0.5); }
+            70% { box-shadow: 0 0 0 15px rgba(74, 108, 247, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(74, 108, 247, 0); }
+        }
+
+        /* 2. አጠቃላይ ገጽታ (General Styles) */
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1a 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: white;
+            padding: 20px;
+        }
+
+        /* 3. ካርዱ (The Card) */
+        .card {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(15px);
+            width: 100%;
+            max-width: 360px;
+            padding: 40px 25px;
+            border-radius: 28px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        /* 4. ፎቶው (Profile Image) */
+        .profile-img {
+            width: 115px;
+            height: 115px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #4a6cf7;
+            margin-bottom: 15px;
+            animation: pulse 2s infinite;
+        }
+
+        h1 { font-size: 26px; margin: 10px 0 5px; font-weight: 700; }
+        h2 { font-size: 14px; color: #4a6cf7; font-weight: 500; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1.5px; }
+        
+        .divider { width: 50px; height: 3px; background: #4a6cf7; margin: 0 auto 20px; border-radius: 2px; }
+        
+        .bio { font-size: 15px; line-height: 1.6; color: #cccccc; margin-bottom: 30px; }
+
+        /* 5. በተኖች (Links) */
+        .links a {
+            display: block;
+            background: rgba(255, 255, 255, 0.95);
+            color: #121212;
+            text-decoration: none;
+            padding: 15px;
+            margin-bottom: 12px;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .links a:hover {
+            transform: scale(1.03);
+            background: #4a6cf7;
+            color: white;
+            box-shadow: 0 10px 20px rgba(74, 108, 247, 0.3);
+        }
+    </style>
 </head>
 <body>
-  <div class="card">
-    <div class="profile-icon">B</div>
+
+<div class="card">
+    <img src="profile.jpg" alt="Profile" class="profile-img">
+    
     <h1>የአንተ ስም</h1>
-    <h2>Graphics Designer & Video Editor</h2>
-    <p class="bio">Creative designer focused on clean visuals and cinematic storytelling in Jimma.</p>
-    <div class="buttons">
-      <a href="https://wa.me/251900000000" class="btn whatsapp">WhatsApp አግኙኝ</a>
-      <a href="mailto:test@example.com" class="btn email">Email ላኩልኝ</a>
+    <h2>Graphics Designer & Editor</h2>
+    <div class="divider"></div>
+    
+    <p class="bio">
+        Creating visually stunning designs and cinematic video edits that capture your brand's essence.
+    </p>
+
+    <div class="links">
+        <a href="https://wa.me/251900000000">WhatsApp አግኙኝ</a>
+        <a href="https://t.me/yourusername">Telegram</a>
+        <a href="mailto:email@example.com">Email ላኩልኝ</a>
+        <a href="#">Portfolio (ስራዎቼ)</a>
     </div>
-  </div>
+</div>
+
 </body>
 </html>
